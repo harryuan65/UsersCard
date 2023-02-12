@@ -1,7 +1,6 @@
 :root {
   --wrapper-width: 480px;
   --image-width: 108px;
-  /* default: use adjustment */
   --rotate-apply-adjustment: 1;
 }
 
@@ -19,7 +18,6 @@
 .userImage {
   --rotate-degree: calc(360deg / var(--item-count));
   --rotate-adjustment: var(--rotate-degree) / -4;
-  /* --rotate-adjustment: 36deg; */
   --rotate-forward: calc(
     var(--i) * var(--rotate-degree) - var(--rotate-apply-adjustment) *
       var(--rotate-adjustment)
