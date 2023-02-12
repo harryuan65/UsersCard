@@ -1,0 +1,49 @@
+.card {
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgb(222, 229, 255);
+  width: 480px;
+  height: 600px;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 50% 25% 25%;
+}
+
+.messageContainer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(33, 44, 74);
+}
+
+.messageContainer h2 {
+  margin: 0;
+}
+
+.messageContainer p {
+  text-align: center;
+}
+
+.button {
+  background-color: #6981ec;
+  border-radius: 32px;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 24px 32px;
+  box-shadow: 0px 4px 15px #6981ec;
+  transition: opacity 0.1s;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+  transition: opacity 0.1s;
+}
+
+.button:active {
+  opacity: 0.6;
+  transition: opacity 0.1s;
+}

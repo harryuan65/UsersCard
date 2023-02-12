@@ -1,8 +1,8 @@
 :root {
   --wrapper-width: 160px;
-  --image-width: 80px;
+  --image-width: 72px;
   --rotate-apply-adjustment: 1;
-  --border-color: rgb(159, 179, 249);
+  --border-color: #a6b1e3;
 }
 
 .wrapper {
