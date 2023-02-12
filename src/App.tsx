@@ -8,8 +8,8 @@ import Male3 from './images/male3.jpeg';
 import styles from './App.module.css';
 
 function App() {
-  const allImages = [Female1, Female2, Female3, Male1, Male2, Male3];
-  const usersImages = allImages.slice(0, 3);
+  const allImages = [Female1, Female2, Female3, Male1, Male2, Male3, Male1];
+  const usersImages = allImages.slice(0, 7); // experimenting with length
   const itemCountStyle = {
     '--item-count': usersImages.length,
     '--rotate-apply-adjustment': usersImages.length % 2 === 0 ? 0 : 1,

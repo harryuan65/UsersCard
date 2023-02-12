@@ -18,7 +18,7 @@
 
 .userImage {
   --rotate-degree: calc(360deg / var(--item-count));
-  --rotate-adjustment: var(--rotate-degree) / 4;
+  --rotate-adjustment: var(--rotate-degree) / -4;
   /* --rotate-adjustment: 36deg; */
   --rotate-forward: calc(
     var(--i) * var(--rotate-degree) - var(--rotate-apply-adjustment) *
@@ -31,5 +31,5 @@
   border-radius: 50%;
   position: absolute;
   transform: rotate(var(--rotate-forward))
-    translate(calc(var(--wrapper-width) / 2)) rotate(var(--rotate-back));
+    translate(calc(-1 * var(--wrapper-width) / 2)) rotate(var(--rotate-back));
 }
