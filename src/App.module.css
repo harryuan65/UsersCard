@@ -15,10 +15,11 @@
 }
 
 .userImage {
+  --rotate-degree: calc(var(--i) * (360deg / var(--item-count)));
   width: var(--image-width);
   border-radius: 50%;
   position: absolute;
-  transform: rotate(calc(var(--i) * (360deg / var(--item-count))))
+  transform: rotate(var(--rotate-degree))
     translate(calc(var(--wrapper-width) / 2))
-    rotate(calc(-1 * var(--i) * (360deg / var(--item-count))));
+    rotate(calc(-1 * var(--rotate-degree)));
 }
