@@ -18,15 +18,6 @@ function App() {
   return (
     <div className="App">
       <div className={styles.wrapper} style={itemCountStyle}>
-        <span
-          id="referencePoint"
-          style={{
-            borderRadius: '50%',
-            width: 30,
-            height: 30,
-            backgroundColor: 'black',
-          }}
-        ></span>
         {usersImages.map((src, i) => {
           const style = { '--i': i } as React.CSSProperties;
           return (
