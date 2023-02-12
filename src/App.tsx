@@ -15,7 +15,9 @@ function App() {
   useEffect(() => {
     if (runFerris) {
       ferrisRef.current = setInterval(() => {
-        setFerrisTick((prevFerrisTick) => prevFerrisTick + 1);
+        setFerrisTick((prevFerrisTick) => {
+          return (prevFerrisTick + 1) % 360;
+        });
       }, 10);
     } else if (ferrisRef.current) {
       clearInterval(ferrisRef.current);
