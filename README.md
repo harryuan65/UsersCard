@@ -4,9 +4,11 @@ Simple users card.
 
 [Demo](https://harryuan65.github.io/UsersCard/)
 
-Tried to implementing icodethis challenge No.101, but things went a little bit further XD.
+![](docs/icodethis.png)
 
-I really wanted to try to make it rotate, and LOL I did it.
+I saw this on twitter and began to wonder how to arrange images like this. So I gave it a shot.
+
+Well... it was supposed to look like the image above, but I really want it to rotate automatically just for fun.
 
 ## Environment
 
