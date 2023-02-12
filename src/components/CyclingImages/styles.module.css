@@ -1,10 +1,11 @@
 :root {
   --wrapper-width: 160px;
   --image-width: 72px;
+  /* Just to rotate a little more when image.length is odd, set to 1 when odd. (acts as a boolean) */
   --rotate-apply-adjustment: 1;
   --border-color: #a6b1e3;
-  /* for ferris like turning effect, default to 0 */
-  --rotate-adjustment-tick: 0;
+  /* rotation offset to work like a ferris wheel, default to 0 */
+  --rotate-offset: 0;
 }
 
 .wrapper {
@@ -21,16 +22,19 @@
 .userImage {
   border: 8px solid var(--border-color);
   --rotate-degree: calc(360deg / var(--item-count));
-  --rotate-adjustment: var(--rotate-degree) / -4;
-  --ferris-tick: var(--rotate-adjustment-tick) * 1deg;
+  /* Rotate back a little bit to look better. Got the number -1/4 when experimenting on browser */
+  --rotate-adjustment-ratio: var(--rotate-degree) / -4;
+  /* 1 * ratio means to apply, 0 * ratio mean Not to apply */
+  --rotate-adjustment: var(--rotate-apply-adjustment) *
+    var(--rotate-adjustment-ratio);
+
+  --ferris-tick: var(--rotate-offset) * 1deg;
   --rotate-forward: calc(
-    var(--i) * var(--rotate-degree) - var(--rotate-apply-adjustment) *
-      var(--rotate-adjustment) + var(--ferris-tick)
+    var(--i) * var(--rotate-degree) - var(--rotate-adjustment) +
+      var(--ferris-tick)
   );
   --rotate-back: calc(
-    -1 * var(--i) * var(--rotate-degree) + var(--rotate-apply-adjustment) * var(
-        --rotate-adjustment
-      ) - var(--ferris-tick)
+    -1 * var(--i) * var(--rotate-degree) + var(--rotate-adjustment) - var(--ferris-tick)
   );
   width: var(--image-width);
   border-radius: 50%;

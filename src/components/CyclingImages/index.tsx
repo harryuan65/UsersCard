@@ -10,7 +10,7 @@ const CyclingImages = ({ srcs, tick }: CyclingImagesProps) => {
   const itemCountStyle = {
     '--item-count': srcs.length,
     '--rotate-apply-adjustment': srcs.length % 2 === 0 ? 0 : 1,
-    '--rotate-adjustment-tick': tick,
+    '--rotate-offset': tick,
   } as React.CSSProperties;
   return (
     <div className={styles.wrapper} style={itemCountStyle}>
