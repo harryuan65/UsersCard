@@ -3,6 +3,8 @@
   --image-width: 72px;
   --rotate-apply-adjustment: 1;
   --border-color: #a6b1e3;
+  /* for ferris like turning effect, default to 0 */
+  --rotate-adjustment-tick: 0;
 }
 
 .wrapper {
@@ -20,12 +22,15 @@
   border: 8px solid var(--border-color);
   --rotate-degree: calc(360deg / var(--item-count));
   --rotate-adjustment: var(--rotate-degree) / -4;
+  --ferris-tick: var(--rotate-adjustment-tick) * 1deg;
   --rotate-forward: calc(
     var(--i) * var(--rotate-degree) - var(--rotate-apply-adjustment) *
-      var(--rotate-adjustment)
+      var(--rotate-adjustment) + var(--ferris-tick)
   );
   --rotate-back: calc(
-    -1 * var(--i) * var(--rotate-degree) + var(--rotate-apply-adjustment) * var(--rotate-adjustment)
+    -1 * var(--i) * var(--rotate-degree) + var(--rotate-apply-adjustment) * var(
+        --rotate-adjustment
+      ) - var(--ferris-tick)
   );
   width: var(--image-width);
   border-radius: 50%;
