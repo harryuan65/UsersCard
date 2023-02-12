@@ -13,4 +13,4 @@ I really wanted to try to make it rotate, and I succeeded.
 | yarn | 1.22.19  |
 | node | v16.15.1 |
 
-No additional packaged used.
+No additional packages used apart from `gh-pages`.
