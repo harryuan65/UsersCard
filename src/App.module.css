@@ -1,6 +1,8 @@
 :root {
   --wrapper-width: 480px;
   --image-width: 108px;
+  /* default: use adjustment */
+  --rotate-apply-adjustment: 1;
 }
 
 .wrapper {
@@ -16,8 +18,15 @@
 
 .userImage {
   --rotate-degree: calc(360deg / var(--item-count));
-  --rotate-forward: calc(var(--i) * var(--rotate-degree));
-  --rotate-back: calc(-1 * var(--i) * var(--rotate-degree));
+  --rotate-adjustment: var(--rotate-degree) / 4;
+  /* --rotate-adjustment: 36deg; */
+  --rotate-forward: calc(
+    var(--i) * var(--rotate-degree) - var(--rotate-apply-adjustment) *
+      var(--rotate-adjustment)
+  );
+  --rotate-back: calc(
+    -1 * var(--i) * var(--rotate-degree) + var(--rotate-apply-adjustment) * var(--rotate-adjustment)
+  );
   width: var(--image-width);
   border-radius: 50%;
   position: absolute;

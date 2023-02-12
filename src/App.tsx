@@ -8,14 +8,25 @@ import Male3 from './images/male3.jpeg';
 import styles from './App.module.css';
 
 function App() {
-  const usersImages = [Female1, Female2, Female3, Male1, Male2, Male3];
+  const allImages = [Female1, Female2, Female3, Male1, Male2, Male3];
+  const usersImages = allImages.slice(0, 3);
   const itemCountStyle = {
     '--item-count': usersImages.length,
+    '--rotate-apply-adjustment': usersImages.length % 2 === 0 ? 0 : 1,
   } as React.CSSProperties;
 
   return (
     <div className="App">
       <div className={styles.wrapper} style={itemCountStyle}>
+        <span
+          id="referencePoint"
+          style={{
+            borderRadius: '50%',
+            width: 30,
+            height: 30,
+            backgroundColor: 'black',
+          }}
+        ></span>
         {usersImages.map((src, i) => {
           const style = { '--i': i } as React.CSSProperties;
           return (
