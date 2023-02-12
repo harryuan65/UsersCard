@@ -1,7 +1,8 @@
 :root {
-  --wrapper-width: 480px;
-  --image-width: 108px;
+  --wrapper-width: 160px;
+  --image-width: 80px;
   --rotate-apply-adjustment: 1;
+  --border-color: rgb(159, 179, 249);
 }
 
 .wrapper {
@@ -10,12 +11,13 @@
   justify-content: center;
   width: var(--wrapper-width);
   height: var(--wrapper-width);
-  border: 1px solid gray;
+  border: 3px solid var(--border-color);
   position: relative;
   border-radius: 50%;
 }
 
 .userImage {
+  border: 8px solid var(--border-color);
   --rotate-degree: calc(360deg / var(--item-count));
   --rotate-adjustment: var(--rotate-degree) / -4;
   --rotate-forward: calc(
